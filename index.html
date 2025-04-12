@@ -133,6 +133,11 @@
                 box-shadow: 0 2px 5px #4b4b4bb3;
             }
 
+            .navbar.scroll {
+                position: fixed;
+                padding: 0.7rem;
+            }
+
             .navbar .nav-logo img {
                 max-height: 35px;
             }
@@ -187,6 +192,7 @@
 
         }
 
+
         /*
         -js-
         navbar 축소 기능 : scroll 시 원래 있던 요소 제거 후 가져옴
@@ -201,12 +207,10 @@
         const navbar = document.getElementById("mainNav");
 
         window.addEventListener('scroll', () => {
-            if (window.innerWidth > 900) {
-                if (window.scrollY <= 20) {
-                    navbar.classList.remove('scroll');
-                } else {
-                    navbar.classList.add('scroll');
-                }
+            if (window.scrollY <= 20) {
+                navbar.classList.remove('scroll');
+            } else {
+                navbar.classList.add('scroll');
             }
         });
 

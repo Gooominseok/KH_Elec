@@ -104,8 +104,7 @@
             background: none;
             border: none;
             color: rgb(0, 0, 0);
-            transition: all 0.5s ease;
-
+            transition: color 0.5s ease;
         }
 
 
@@ -118,7 +117,7 @@
         .nav-link a {
             color: rgb(0, 0, 0);
             text-decoration: none;
-            transition: all 0.5s ease;
+            transition: color 0.5s ease;
         }
 
         .nav-link a:hover {
@@ -155,7 +154,7 @@
 
 
             .nav-link {
-                display: none;
+                display: flex;
                 flex-direction: column;
                 position: absolute;
                 background-color: #1a1a1a;
@@ -165,10 +164,25 @@
                 padding: 1rem;
                 text-align: center;
 
+                max-height: 0;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                overflow: hidden;
+                transition:
+                    max-height 0.5s ease,
+                    opacity 0.3s ease,
+                    transform 0.3s ease,
+                    padding 0.3s ease;
+                padding: 0 1rem;
             }
 
             .nav-link.show {
-                display: flex;
+                max-height: 300px;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                padding: 1rem;
             }
 
         }
@@ -234,30 +248,31 @@
                 </div>
             </div>
             <!--버튼-->
-            <div class="carousel_button">
-                <button class="btn-prev">
-                    prev
-                </button>
-                <button class="btn-next">
-                    next
-                </button>
+            <div class="carousel-button">
+                <button class="btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
+            <!--아래 뭐라고 해야 되냐 사진 아래 그 순서 동그란 그거 알지?-->
+            <div>
 
+            </div>
         </div>
     </section>
     <!--carousel-->
     <style>
-        .carousel-container{
-            position:relative;
+        .carousel-container {
+            position: relative;
             overflow: hidden;
-            width: 100vw;
+            width: 100%;
         }
+
         .carousel {
             display: flex;
             transition: all 0.5s ease;
-            width: 400vw;
+            width: 500vw;
         }
-        .cell{
+
+        .cell {
             flex: 0 0 100vw;
         }
 
@@ -265,6 +280,32 @@
             width: 100%;
             height: auto;
             display: block;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            left: 0;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 1rem;
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .carousel-button button {
+            color: rgb(170, 170, 170);
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0;
+        }
+
+        .carousel-button button:hover {
+            color: rgb(98, 98, 98);
         }
     </style>
 
@@ -274,16 +315,16 @@
         const cell_Cnt = document.querySelectorAll('.cell').length;
 
         document.querySelector('.btn-next').addEventListener('click', () => {
-            index = (index +1) %cell_Cnt;
+            index = (index + 1) % cell_Cnt;
             updateCarousel();
         });
 
         document.querySelector('.btn-prev').addEventListener('click', () => {
-            index = (index -1 +cell_Cnt) %cell_Cnt;
+            index = (index - 1 + cell_Cnt) % cell_Cnt;
             updateCarousel();
         });
 
-        function updateCarousel(){
+        function updateCarousel() {
             const offset = index * 100;
             carousel.style.transform = `translateX(-${offset}vw)`;
         }

@@ -14,6 +14,10 @@
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    
+    <!-- ask관련 참조 -->
+    <link rel="stylesheet" href="css/ask.css">
+    <script src="js/ask.js"></script>
 </head>
 
 <body id="page-top">
@@ -433,7 +437,182 @@
 
     <!-- footer -->
     <section class="page-section" id="footer">
-
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="left-content">
+                    <header>
+                        <h1>문의하기</h1>
+                    </header>
+                    
+                    <div class="description">
+                        전화를 통해 상담예약을 하셔도 좋지만,<br>
+                        정보 기재 및 체크하시고 문의하기 해주시면 빠르게 확인하여<br>
+                        담당자를 통해서 더욱 원활한 상담해드리겠습니다.<br>
+                        카카오톡 실시간 상담 가능합니다! 카카오톡 버튼을 클릭해주세요.
+                    </div>
+                    
+                    <div class="operating-hours">
+                        <h3>운영시간</h3>
+                        <p>전화상담 - 07:00~24:00</p>
+                        <p>카카오톡상담 - 07:00~24:00 (연중무휴)</p>
+                        <p>홈페이지 문의하기 - 24시간 (연중무휴)</p>
+                    </div>
+                    
+                    <div class="contact-buttons">
+                        <a href="tel:010-2118-9678" class="phone-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                            </svg>
+                            전화상담 010-2118-9678
+                        </a>
+                        <a href="#" class="kakao-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 2.796 0 6.25c0 2.217 1.477 4.152 3.686 5.284a19.37 19.37 0 0 1-.305 1.715c-.046.208.086.384.298.309.544-.193 1.848-.693 2.56-1.003A9.981 9.981 0 0 0 8 12.5c4.42 0 8-2.796 8-6.25S12.42 0 8 0z"/>
+                            </svg>
+                            카카오톡 상담
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="right-content">
+                    <div class="form-container">
+                        <form id="inquiryForm" autocomplete="off">
+                            <div class="form-group" id="nameField">
+                                <label for="name" id="nameLabel">이름</label>
+                                <input type="text" id="name" name="name" autocomplete="off">
+                            </div>
+                            
+                            <div class="form-group" id="phoneField">
+                                <label for="phone" id="phoneLabel">연락처</label>
+                                <input type="tel" id="phone" name="phone" placeholder="'-'(하이폰)을 빼고 입력해주세요" autocomplete="off">
+                            </div>
+                            
+                            <div class="form-group" id="addressField">
+                                <label for="address" id="addressLabel">주소</label>
+                                <input type="text" id="address" name="address" placeholder="클릭하여 주소를 검색하세요" readonly style="cursor: pointer;" autocomplete="off">
+                                <div id="addressContainer" style="display: none; width: 100%; height: 300px; margin-top: 10px; margin-bottom: 10px; border: 1px solid #ddd;"></div>
+                            </div>
+                            
+                            <div class="form-group" id="addressDetailField">
+                                <label for="addressDetail" id="addressDetailLabel">상세주소</label>
+                                <input type="text" id="addressDetail" name="addressDetail" placeholder="상세주소를 입력해주세요" autocomplete="off">
+                            </div>
+                            
+                            <div class="form-group" id="optionsField">
+                                <label id="optionsLabel">옵션 선택</label>
+                                <div class="options-container">
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option1" name="options[]" value="옵션1" autocomplete="off">
+                                        <label for="option1">옵션1</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option2" name="options[]" value="옵션2" autocomplete="off">
+                                        <label for="option2">옵션2</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option3" name="options[]" value="옵션3" autocomplete="off">
+                                        <label for="option3">옵션3</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option4" name="options[]" value="옵션4" autocomplete="off">
+                                        <label for="option4">옵션4</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option5" name="options[]" value="옵션5" autocomplete="off">
+                                        <label for="option5">옵션5</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option6" name="options[]" value="옵션6" autocomplete="off">
+                                        <label for="option6">옵션6</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option7" name="options[]" value="옵션7" autocomplete="off">
+                                        <label for="option7">옵션7</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option8" name="options[]" value="옵션8" autocomplete="off">
+                                        <label for="option8">옵션8</label>
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="optionEtc" name="options[]" value="기타" autocomplete="off">
+                                        <label for="optionEtc">기타</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" id="serviceTypeField">
+                                <label for="serviceType" id="serviceTypeLabel">서비스 종류</label>
+                                <select id="serviceType" name="serviceType" autocomplete="off">
+                                    <option value="" disabled selected>서비스를 선택해주세요</option>
+                                    <option value="customer">고객 지원</option>
+                                    <option value="technical">기술 지원</option>
+                                    <option value="sales">제품 문의</option>
+                                    <option value="partnership">제휴 문의</option>
+                                    <option value="other">기타</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" id="contentField">
+                                <label for="content" id="contentLabel">문의 내용</label>
+                                <textarea id="content" name="content" placeholder="궁금한 점이나 문의사항을 자유롭게 작성해주세요" autocomplete="off"></textarea>
+                            </div>
+                            
+                            <div id="privacyPolicySection" class="privacy-policy-section" style="display: none; margin-bottom: 20px;">
+                                <div class="form-container" style="background-color: #f8f9fa; padding: 20px; border-radius: 4px; margin-top: 10px;">
+                                    <h3 style="margin-bottom: 15px; font-size: 16px; color: #2c3e50;">개인정보 처리방침</h3>
+                                    <div style="max-height: 200px; overflow-y: auto; font-size: 14px; line-height: 1.5; color: #666;">
+                                        <p><strong>1. 개인정보의 수집 및 이용 목적</strong></p>
+                                        <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보 보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+                                        <ul style="margin-left: 20px; margin-top: 5px; margin-bottom: 10px;">
+                                            <li>고객 문의 접수 및 처리</li>
+                                            <li>서비스 제공 및 계약 이행</li>
+                                            <li>서비스 개선 및 개발</li>
+                                        </ul>
+                                        
+                                        <p><strong>2. 수집하는 개인정보 항목</strong></p>
+                                        <p>회사는 서비스 제공 및 문의 응대를 위해 아래와 같은 개인정보를 수집합니다.</p>
+                                        <ul style="margin-left: 20px; margin-top: 5px; margin-bottom: 10px;">
+                                            <li>필수항목: 이름, 연락처, 주소</li>
+                                            <li>선택항목: 상세주소, 서비스 종류, 문의 내용</li>
+                                        </ul>
+                                        
+                                        <p><strong>3. 개인정보의 보유 및 이용기간</strong></p>
+                                        <p>회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 정한 일정한 기간 동안 개인정보를 보관합니다.</p>
+                                        <ul style="margin-left: 20px; margin-top: 5px; margin-bottom: 10px;">
+                                            <li>소비자의 불만 또는 분쟁처리에 관한 기록: 3년 (전자상거래 등에서의 소비자 보호에 관한 법률)</li>
+                                            <li>계약 또는 청약철회 등에 관한 기록: 5년 (전자상거래 등에서의 소비자 보호에 관한 법률)</li>
+                                        </ul>
+                                        
+                                        <p><strong>4. 개인정보의 파기절차 및 방법</strong></p>
+                                        <p>회사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다. 파기절차 및 방법은 다음과 같습니다.</p>
+                                        <ul style="margin-left: 20px; margin-top: 5px;">
+                                            <li>파기절차: 불필요한 개인정보는 개인정보 관리책임자의 승인 하에 파기합니다.</li>
+                                            <li>파기방법: 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="privacy-box">
+                                이 양식을 제출함으로써 <a href="#" id="privacyPolicyLink">개인정보 처리방침</a>에 동의하게 됩니다.
+                                <br>별표(*)가 표시된 필드는 필수 항목입니다.
+                            </div>
+                            
+                            <div class="checkbox-group" id="privacyAgreementField">
+                                <input type="checkbox" id="privacyAgreement" name="privacyAgreement" autocomplete="off">
+                                <label for="privacyAgreement" id="privacyAgreementLabel">개인정보 수집 및 이용에 동의합니다</label>
+                            </div>
+                            
+                            <button type="submit" class="submit-button">문의하기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <footer>
+                <p>© 2025 고객센터 | 문의 전화: 02-123-4567 | 이메일: support@example.com</p>
+            </footer> -->
+        </div>
     </section>
 
     <style>

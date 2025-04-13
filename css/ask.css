@@ -235,6 +235,10 @@ select {
     padding-right: 40px !important;
 }
 
+.right-content_head {
+    margin-bottom: 40px;
+}
+
 /* IE 10+ 화살표 제거 */
 select::-ms-expand {
     display: none;

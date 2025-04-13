@@ -440,7 +440,7 @@
         <div class="container">
             <div class="content-wrapper">
                 <div class="left-content">
-                    <header>
+                    <!-- <header>
                         <h1>문의하기</h1>
                     </header>
                     
@@ -449,16 +449,24 @@
                         정보 기재 및 체크하시고 문의하기 해주시면 빠르게 확인하여<br>
                         담당자를 통해서 더욱 원활한 상담해드리겠습니다.<br>
                         카카오톡 실시간 상담 가능합니다! 카카오톡 버튼을 클릭해주세요.
-                    </div>
+                    </div> -->
                     
-                    <div class="operating-hours">
+                    <!-- <div class="operating-hours">
                         <h3>운영시간</h3>
                         <p>전화상담 - 07:00~24:00</p>
                         <p>카카오톡상담 - 07:00~24:00 (연중무휴)</p>
                         <p>홈페이지 문의하기 - 24시간 (연중무휴)</p>
-                    </div>
+                    </div> -->
+
+                    <header>
+                        <h2>
+                            경희전기는<br>
+                            40년 경력, 합리적인 가격, 안전한 시공으로<br>
+                            고객우선 기업입니다.
+                        </h2>
+                    </header>
                     
-                    <div class="contact-buttons">
+                    <!-- <div class="contact-buttons">
                         <a href="tel:010-2118-9678" class="phone-button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                 <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
@@ -471,14 +479,14 @@
                             </svg>
                             카카오톡 상담
                         </a>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <div class="right-content">
                     <div class="form-container">
                         <form id="inquiryForm" autocomplete="off">
                             <div class="form-group" id="nameField">
-                                <label for="name" id="nameLabel">이름</label>
+                                <label for="name" id="nameLabel">고객님 성함</label>
                                 <input type="text" id="name" name="name" autocomplete="off">
                             </div>
                             
@@ -499,39 +507,35 @@
                             </div>
                             
                             <div class="form-group" id="optionsField">
-                                <label id="optionsLabel">옵션 선택</label>
+                                <label id="optionsLabel">어떤 서비스가 필요하세요?</label>
                                 <div class="options-container">
                                     <div class="option-item">
                                         <input type="checkbox" id="option1" name="options[]" value="옵션1" autocomplete="off">
-                                        <label for="option1">옵션1</label>
+                                        <label for="option1">닥트</label>
                                     </div>
                                     <div class="option-item">
                                         <input type="checkbox" id="option2" name="options[]" value="옵션2" autocomplete="off">
-                                        <label for="option2">옵션2</label>
+                                        <label for="option2">누전</label>
                                     </div>
                                     <div class="option-item">
                                         <input type="checkbox" id="option3" name="options[]" value="옵션3" autocomplete="off">
-                                        <label for="option3">옵션3</label>
+                                        <label for="option3">전등/조명</label>
                                     </div>
                                     <div class="option-item">
                                         <input type="checkbox" id="option4" name="options[]" value="옵션4" autocomplete="off">
-                                        <label for="option4">옵션4</label>
+                                        <label for="option4">인테리어 전기</label>
                                     </div>
                                     <div class="option-item">
                                         <input type="checkbox" id="option5" name="options[]" value="옵션5" autocomplete="off">
-                                        <label for="option5">옵션5</label>
+                                        <label for="option5">전기 공사</label>
                                     </div>
                                     <div class="option-item">
                                         <input type="checkbox" id="option6" name="options[]" value="옵션6" autocomplete="off">
-                                        <label for="option6">옵션6</label>
+                                        <label for="option6">모터 교체</label>
                                     </div>
                                     <div class="option-item">
                                         <input type="checkbox" id="option7" name="options[]" value="옵션7" autocomplete="off">
-                                        <label for="option7">옵션7</label>
-                                    </div>
-                                    <div class="option-item">
-                                        <input type="checkbox" id="option8" name="options[]" value="옵션8" autocomplete="off">
-                                        <label for="option8">옵션8</label>
+                                        <label for="option7">증설 공사</label>
                                     </div>
                                     <div class="option-item">
                                         <input type="checkbox" id="optionEtc" name="options[]" value="기타" autocomplete="off">
@@ -541,14 +545,16 @@
                             </div>
                             
                             <div class="form-group" id="serviceTypeField">
-                                <label for="serviceType" id="serviceTypeLabel">서비스 종류</label>
+                                <label for="serviceType" id="serviceTypeLabel">어떤 건물인가요?</label>
                                 <select id="serviceType" name="serviceType" autocomplete="off">
-                                    <option value="" disabled selected>서비스를 선택해주세요</option>
-                                    <option value="customer">고객 지원</option>
-                                    <option value="technical">기술 지원</option>
-                                    <option value="sales">제품 문의</option>
-                                    <option value="partnership">제휴 문의</option>
-                                    <option value="other">기타</option>
+                                    <option value="" disabled selected>건물종류를 선택해주세요</option>
+                                    <option value="아파트">아파트</option>
+                                    <option value="빌라">빌라</option>
+                                    <option value="다세대">다세대</option>
+                                    <option value="오피스텔">오피스텔</option>
+                                    <option value="상가">상가</option>
+                                    <option value="주택">주택</option>
+                                    <option value="기타">기타</option>
                                 </select>
                             </div>
                             

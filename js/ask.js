@@ -1,7 +1,7 @@
 // 각 필드 노출 설정 (true: 표시, false: 숨김)
 const fieldSettings = {
     nameField: true,            // 이름 필드
-    phoneField: true,           // 연락처 필드
+    phoneField: false,           // 연락처 필드
     addressField: true,         // 주소 필드
     addressDetailField: true,   // 상세주소 필드
     optionsField: true,         // 옵션 선택 필드
@@ -16,7 +16,7 @@ const requiredSettings = {
     phoneField: true,           // 연락처 필드
     addressField: true,         // 주소 필드
     addressDetailField: false,  // 상세주소 필드
-    optionsField: false,        // 옵션 선택 필드
+    optionsField: true,         // 옵션 선택 필드
     serviceTypeField: true,     // 서비스 종류 필드
     contentField: true,         // 문의 내용 필드
     privacyAgreementField: true // 개인정보 동의 필드

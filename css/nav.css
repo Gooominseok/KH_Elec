@@ -1,0 +1,149 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    right: 0;
+    left: 0;
+    padding: 1.2rem;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.nav-logo img {
+    max-height: 50px;
+    transition: max-height 0.3s ease;
+}
+
+.navbar.scroll {
+    padding: 1rem;
+    background-color: #3e3e3e;
+    box-shadow: 0 2px 5px #4b4b4bb3;
+}
+
+.navbar.scroll .nav-logo img {
+    max-height: 35px;
+}
+
+.navbar.scroll .nav-link a {
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+}
+
+.navbar.scroll .nav-link a:hover {
+    color: #f7e647;
+}
+
+
+.navbar .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: auto;
+}
+
+
+.navToggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.5s ease;
+}
+
+
+.nav-link {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-link a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.nav-link a:hover {
+    color: #f7e647;
+}
+
+
+@media (max-width: 900px) {
+    .navbar {
+        position: relative;
+        padding: 0.7rem;
+        background-color: #3e3e3e;
+        box-shadow: 0 2px 5px #4b4b4bb3;
+    }
+
+    .navbar.scroll {
+        position: fixed;
+        padding: 0.7rem;
+    }
+
+    .navbar .nav-logo img {
+        max-height: 35px;
+    }
+
+    .nav-link a {
+        color: #ffffff;
+
+    }
+
+    .navToggle {
+        display: block;
+        color: #ffffff;
+    }
+
+    .navToggle:hover {
+        display: block;
+        color: #f7e647;
+    }
+
+
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: #1a1a1a;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        overflow: hidden;
+        transition:
+            max-height 0.5s ease,
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            padding 0.3s ease;
+        padding: 0 1rem;
+    }
+
+    .nav-link.show {
+        max-height: 300px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        padding: 1rem;
+    }
+
+}

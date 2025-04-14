@@ -75,7 +75,7 @@
 
 .services-button {
     display: grid;
-    gap: clamp(0.8rem, 1.5vw, 2rem);
+    gap: clamp(0.8rem, 3vw, 2rem);
     justify-content: center;
     padding-top: 2rem;
 }
@@ -85,7 +85,7 @@
 
     /* 큰 화면(6개) */
     .services-button {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 

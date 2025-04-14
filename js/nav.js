@@ -31,10 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
 
-            const targetId = this.getAttribute('href');
+            //target으로 하는 id 가져와서 해당 id를 가지고 있는 녀석 targetEl에 저장
+            const targetId = this.dataset.target;
             const targetEl = document.querySelector(targetId);
 
             if (targetEl) {
+                //90px 위로
                 const scrollPos = -90;
                 const scroll = targetEl.getBoundingClientRect().top + window.pageYOffset + scrollPos;
 

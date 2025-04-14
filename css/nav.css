@@ -1,4 +1,4 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -61,6 +61,11 @@ html{
     border: none;
     color: rgb(0, 0, 0);
     transition: color 0.5s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.navToggle:hover {
+    background-color: #ffffff00;
 }
 
 
@@ -100,7 +105,7 @@ html{
 
     .nav-link a {
         color: #ffffff;
-
+        -webkit-tap-highlight-color: transparent;
     }
 
     .navToggle {

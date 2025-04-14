@@ -75,14 +75,14 @@
 
 .services-button {
     display: grid;
-    gap: clamp(0.8rem, 3vw, 2rem);
+    gap: clamp(0.8rem, 4vw, 4rem);
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 3rem;
     grid-template-columns: repeat(5, 1fr);
 }
 
 .service-item img {
-    width: 8vw;
+    width: 6vw;
     height: auto;
     transition: transform 0.3s ease;
 }

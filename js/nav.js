@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 스크롤 시 투명 네비게이션 삭제 후 네비게이션 재생성
     const navbar = document.getElementById("mainNav");
 
     window.addEventListener('scroll', () => {
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 토글 클릭 시 메뉴 활성화
     const navToggle = document.getElementById('navToggle');
     const navLink = document.getElementById('navLink');
     const navItems = document.querySelectorAll('.nav-item');
@@ -20,6 +22,27 @@ document.addEventListener('DOMContentLoaded', () => {
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             navLink.classList.remove('show');
+        });
+    });
+
+    //네비게이션 기능 사용자 지정
+    navItems.forEach(link => {
+        //기본 동작 방지
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetEl = document.querySelector(targetId);
+
+            if (targetEl) {
+                const scrollPos = -90;
+                const scroll = targetEl.getBoundingClientRect().top + window.pageYOffset + scrollPos;
+
+                window.scrollTo({
+                    top: scroll,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });

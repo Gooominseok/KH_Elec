@@ -13,6 +13,9 @@ html {
     box-sizing: border-box;
     transition: all 0.3s ease;
 }
+.nav-logo{
+    -webkit-tap-highlight-color: transparent;
+}
 
 .nav-logo img {
     max-height: 50px;

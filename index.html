@@ -48,26 +48,31 @@
         </div>
     </nav>
     <!-- main(img) -->
-    <section class="page-section" id="main">
-        <div class="carousel-container">
+    <!-- <section class="page-section" id="main">
+        <div class="carousel-container"> -->
             <!--캐러셀-->
-            <div class="carousel">
+            <!-- <div class="carousel">
                 <div class="cell">
                     <img class="main-img" src="assets/img/slide1.png" alt="#1" />
                 </div>
                 <div class="cell">
                     <img class="main-img" src="assets/img/slide2.png" alt="#2" />
                 </div>
-            </div>
+            </div> -->
             <!--버튼-->
-            <div class="carousel-button">
+            <!-- <div class="carousel-button">
                 <button class="btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
+            </div> -->
             <!--아래 뭐라고 해야 되냐 사진 아래 그 순서 동그란 그거 알지?-->
-            <div>
+            <!-- <div>
 
             </div>
+        </div>
+    </section> -->
+    <section class="page-section" id="main">
+        <div class="container-main">
+            <img class="main-img" src="assets/img/slide1.png" alt="#1" />
         </div>
     </section>
 
@@ -208,7 +213,7 @@
                         </a>
                     </div>
                 </div> -->
-                
+
                 <div class="right-content">
                     <div class="right-content_head">
                         <h2>
@@ -223,61 +228,74 @@
                                 <label for="name" id="nameLabel">고객님 성함</label>
                                 <input type="text" id="name" name="name" autocomplete="off">
                             </div>
-                            
+
                             <div class="form-group" id="phoneField">
                                 <label for="phone" id="phoneLabel">연락처</label>
-                                <input type="tel" id="phone" name="phone" placeholder="'-'(하이폰)을 빼고 입력해주세요" autocomplete="off">
+                                <input type="tel" id="phone" name="phone" placeholder="'-'(하이폰)을 빼고 입력해주세요"
+                                    autocomplete="off">
                             </div>
-                            
+
                             <div class="form-group" id="addressField">
                                 <label for="address" id="addressLabel">주소</label>
-                                <input type="text" id="address" name="address" placeholder="클릭하여 주소를 검색하세요" readonly style="cursor: pointer;" autocomplete="off">
-                                <div id="addressContainer" style="display: none; width: 100%; height: 300px; margin-top: 10px; margin-bottom: 10px; border: 1px solid #ddd;"></div>
+                                <input type="text" id="address" name="address" placeholder="클릭하여 주소를 검색하세요" readonly
+                                    style="cursor: pointer;" autocomplete="off">
+                                <div id="addressContainer"
+                                    style="display: none; width: 100%; height: 300px; margin-top: 10px; margin-bottom: 10px; border: 1px solid #ddd;">
+                                </div>
                             </div>
-                            
+
                             <div class="form-group" id="addressDetailField">
                                 <label for="addressDetail" id="addressDetailLabel">상세주소</label>
-                                <input type="text" id="addressDetail" name="addressDetail" placeholder="상세주소를 입력해주세요" autocomplete="off">
+                                <input type="text" id="addressDetail" name="addressDetail" placeholder="상세주소를 입력해주세요"
+                                    autocomplete="off">
                             </div>
-                            
+
                             <div class="form-group" id="optionsField">
                                 <label id="optionsLabel">어떤 서비스가 필요하세요?</label>
                                 <div class="options-container">
                                     <div class="option-item">
-                                        <input type="checkbox" id="option1" name="options[]" value="닥트" autocomplete="off">
+                                        <input type="checkbox" id="option1" name="options[]" value="닥트"
+                                            autocomplete="off">
                                         <label for="option1">닥트</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option2" name="options[]" value="누전" autocomplete="off">
+                                        <input type="checkbox" id="option2" name="options[]" value="누전"
+                                            autocomplete="off">
                                         <label for="option2">누전</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option3" name="options[]" value="전등/조명" autocomplete="off">
+                                        <input type="checkbox" id="option3" name="options[]" value="전등/조명"
+                                            autocomplete="off">
                                         <label for="option3">전등/조명</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option4" name="options[]" value="인테리어 전기" autocomplete="off">
+                                        <input type="checkbox" id="option4" name="options[]" value="인테리어 전기"
+                                            autocomplete="off">
                                         <label for="option4">인테리어 전기</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option5" name="options[]" value="전기 공사" autocomplete="off">
+                                        <input type="checkbox" id="option5" name="options[]" value="전기 공사"
+                                            autocomplete="off">
                                         <label for="option5">전기 공사</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option6" name="options[]" value="모터 교체" autocomplete="off">
+                                        <input type="checkbox" id="option6" name="options[]" value="모터 교체"
+                                            autocomplete="off">
                                         <label for="option6">모터 교체</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option7" name="options[]" value="증설 공사" autocomplete="off">
+                                        <input type="checkbox" id="option7" name="options[]" value="증설 공사"
+                                            autocomplete="off">
                                         <label for="option7">증설 공사</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="optionEtc" name="options[]" value="기타" autocomplete="off">
+                                        <input type="checkbox" id="optionEtc" name="options[]" value="기타"
+                                            autocomplete="off">
                                         <label for="optionEtc">기타</label>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group" id="serviceTypeField">
                                 <label for="serviceType" id="serviceTypeLabel">어떤 건물인가요?</label>
                                 <select id="serviceType" name="serviceType" autocomplete="off">
@@ -291,40 +309,47 @@
                                     <option value="기타">기타</option>
                                 </select>
                             </div>
-                            
+
                             <div class="form-group" id="contentField">
                                 <label for="content" id="contentLabel">문의 내용</label>
-                                <textarea id="content" name="content" placeholder="궁금한 점이나 문의사항을 자유롭게 작성해주세요" autocomplete="off"></textarea>
+                                <textarea id="content" name="content" placeholder="궁금한 점이나 문의사항을 자유롭게 작성해주세요"
+                                    autocomplete="off"></textarea>
                             </div>
-                            
-                            <div id="privacyPolicySection" class="privacy-policy-section" style="display: none; margin-bottom: 20px;">
-                                <div class="form-container" style="background-color: #f8f9fa; padding: 20px; border-radius: 4px; margin-top: 10px;">
+
+                            <div id="privacyPolicySection" class="privacy-policy-section"
+                                style="display: none; margin-bottom: 20px;">
+                                <div class="form-container"
+                                    style="background-color: #f8f9fa; padding: 20px; border-radius: 4px; margin-top: 10px;">
                                     <h3 style="margin-bottom: 15px; font-size: 16px; color: #2c3e50;">개인정보 처리방침</h3>
-                                    <div style="max-height: 200px; overflow-y: auto; font-size: 14px; line-height: 1.5; color: #666;">
+                                    <div
+                                        style="max-height: 200px; overflow-y: auto; font-size: 14px; line-height: 1.5; color: #666;">
                                         <p><strong>1. 개인정보의 수집 및 이용 목적</strong></p>
-                                        <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보 보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+                                        <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이
+                                            변경되는 경우에는 개인정보 보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
                                         <ul style="margin-left: 20px; margin-top: 5px; margin-bottom: 10px;">
                                             <li>고객 문의 접수 및 처리</li>
                                             <li>서비스 제공 및 계약 이행</li>
                                             <li>서비스 개선 및 개발</li>
                                         </ul>
-                                        
+
                                         <p><strong>2. 수집하는 개인정보 항목</strong></p>
                                         <p>회사는 서비스 제공 및 문의 응대를 위해 아래와 같은 개인정보를 수집합니다.</p>
                                         <ul style="margin-left: 20px; margin-top: 5px; margin-bottom: 10px;">
                                             <li>필수항목: 이름, 연락처, 주소</li>
                                             <li>선택항목: 상세주소, 서비스 종류, 문의 내용</li>
                                         </ul>
-                                        
+
                                         <p><strong>3. 개인정보의 보유 및 이용기간</strong></p>
-                                        <p>회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 정한 일정한 기간 동안 개인정보를 보관합니다.</p>
+                                        <p>회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할
+                                            필요가 있는 경우 회사는 아래와 같이 관계법령에서 정한 일정한 기간 동안 개인정보를 보관합니다.</p>
                                         <ul style="margin-left: 20px; margin-top: 5px; margin-bottom: 10px;">
                                             <li>소비자의 불만 또는 분쟁처리에 관한 기록: 3년 (전자상거래 등에서의 소비자 보호에 관한 법률)</li>
                                             <li>계약 또는 청약철회 등에 관한 기록: 5년 (전자상거래 등에서의 소비자 보호에 관한 법률)</li>
                                         </ul>
-                                        
+
                                         <p><strong>4. 개인정보의 파기절차 및 방법</strong></p>
-                                        <p>회사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다. 파기절차 및 방법은 다음과 같습니다.</p>
+                                        <p>회사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다. 파기절차 및
+                                            방법은 다음과 같습니다.</p>
                                         <ul style="margin-left: 20px; margin-top: 5px;">
                                             <li>파기절차: 불필요한 개인정보는 개인정보 관리책임자의 승인 하에 파기합니다.</li>
                                             <li>파기방법: 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</li>
@@ -332,23 +357,23 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="privacy-box">
                                 이 양식을 제출함으로써 <a href="#" id="privacyPolicyLink">개인정보 처리방침</a>에 동의하게 됩니다.
                                 <br>별표(*)가 표시된 필드는 필수 항목입니다.
                             </div>
-                            
+
                             <div class="checkbox-group" id="privacyAgreementField">
                                 <input type="checkbox" id="privacyAgreement" name="privacyAgreement" autocomplete="off">
                                 <label for="privacyAgreement" id="privacyAgreementLabel">개인정보 수집 및 이용에 동의합니다</label>
                             </div>
-                            
+
                             <button type="submit" class="submit-button">문의하기</button>
                         </form>
                     </div>
                 </div>
             </div>
-            
+
             <!-- <footer>
                 <p>© 2025 고객센터 | 문의 전화: 02-123-4567 | 이메일: support@example.com</p>
             </footer> -->
@@ -377,7 +402,7 @@
 
     <!-- footer -->
     <section class="page-section" id="footer">
-        
+
     </section>
 
 </body>

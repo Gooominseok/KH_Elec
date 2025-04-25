@@ -15,6 +15,16 @@
     margin: 0 auto;
 }
 
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+  }
+
+  body {
+    font-family: 'Paperlogy-8ExtraBold', sans-serif;
+  }
+
 /*main*/
 .container-main {
     position: relative;
@@ -87,16 +97,16 @@
 
 .services-button {
     display: grid;
-    gap: clamp(0.8rem, 6vw, 6rem);
+    gap: clamp(0.8rem, 3vw, 6rem);
     justify-content: center;
     padding-top: 3rem;
     -webkit-tap-highlight-color: transparent;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 }
 
 .service-item img {
-    width: 6vw;
-    max-width: 130px;
+    width: 9vw;
+    max-width: 150px;
     min-width: 100px;
     height: auto;     
     transition: transform 0.3s ease;
@@ -122,6 +132,16 @@
     }
 } 
 */
+@media (max-width: 1281px) {
+    .services-button {
+        width: 80%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .service-item img{
+        width: 17vw;
+        min-width: 0;
+    }
+}
 
 @media (max-width:400px) {
     .services-title {
@@ -133,15 +153,7 @@
     }
 }
 
-@media (max-width: 1000px) {
-    .services-button {
-        width: 80%;
-    }
-    .service-item img{
-        width: 10vw;
-        min-width: 0;
-    }
-}
+
 
 
 /*text*/

@@ -79,7 +79,7 @@ html {
 }
 
 .nav-link a {
-    color: rgb(255, 255, 255);
+    color: rgb(46 61 134);
     text-decoration: none;
     transition: color 0.5s ease;
 }

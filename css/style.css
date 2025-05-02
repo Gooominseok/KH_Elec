@@ -39,8 +39,8 @@
 
 /*describe*/
 .describe-title {
-    background-color: #1c76c8;
-    color: white;
+    background-color: #2e3d86;
+    color: #ffffee;
     width: 100%;
     padding: 1em 0em;
     /* border-radius: 0.5em; */
@@ -77,8 +77,8 @@
 
 /*services*/
 .services-title {
-    background-color: #00b3e0fb;
-    color: rgb(0, 0, 0);
+    background-color: #2e3d86;
+    color: #ffffee;
     padding: 0.75em 5em;
     border-radius: 0.5em;
     display: inline-flex;

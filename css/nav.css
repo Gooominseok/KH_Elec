@@ -24,7 +24,7 @@ html {
 
 .navbar.scroll {
     padding: 1rem;
-    background-color: #3e3e3e;
+    background-color: #ffffffe2;
     box-shadow: 0 2px 5px #4b4b4bb3;
 }
 
@@ -33,8 +33,9 @@ html {
 }
 
 .navbar.scroll .nav-link a {
-    color: rgb(255, 255, 255);
+    color: #2e3d86;
     transition: all 0.5s ease;
+    font-size: clamp(0.6rem,2vw,1.2rem);
 }
 
 .navbar.scroll .nav-link a:hover {
@@ -54,21 +55,26 @@ html {
     align-items: center;
     gap: 1.5rem;
     width: auto;
+    font-weight: 550;
 }
 
 
 .navToggle {
     display: none;
-    font-size: 1.5rem;
+    font-size: clamp(1rem,4vw,1.5rem);
     background: none;
     border: none;
     color: rgb(0, 0, 0);
     transition: color 0.5s ease;
     -webkit-tap-highlight-color: transparent;
+    height: 0;
+    padding-top: 0;
 }
 
 .navToggle:hover {
     background-color: #ffffff00;
+    height: 0;
+    padding-top: 0;
 }
 
 
@@ -81,7 +87,9 @@ html {
 .nav-link a {
     color: rgb(46 61 134);
     text-decoration: none;
+    font-size: clamp(1.2rem,2vw,1.4rem);
     transition: color 0.5s ease;
+    align-items: center;
 }
 
 .nav-link a:hover {
@@ -91,33 +99,45 @@ html {
 
 @media (max-width: 900px) {
     .navbar {
-        position: relative;
+        position: fixed;
         padding: 0.7rem;
-        background-color: #3e3e3e;
-        box-shadow: 0 2px 5px #4b4b4bb3;
+        background-color: transparent;
     }
 
     .navbar.scroll {
         position: fixed;
         padding: 0.7rem;
+        background-color: #ffffffe2;
+    }
+
+    .navbar.scroll .nav-logo img {
+        max-height: clamp(20px,4vw,35px);
+    }
+    
+    .navbar.scroll .nav-link a {
+        color: #2e3d86;
+        -webkit-tap-highlight-color: transparent;
+        font-size: clamp(0.8rem,3vw,1.2rem);
     }
 
     .navbar .nav-logo img {
-        max-height: 35px;
+        max-height: clamp(20px,4vw,35px);
     }
 
     .nav-link a {
-        color: #ffffff;
+        color: #2e3d86;
         -webkit-tap-highlight-color: transparent;
     }
 
     .navToggle {
-        display: block;
-        color: #ffffff;
+        display: flex;
+        color: #2e3d86;
+        align-items: center; /* 세로 가운데 정렬 */
+
     }
 
     .navToggle:hover {
-        display: block;
+        display: flex;
         color: #f7e647;
     }
 
@@ -126,12 +146,13 @@ html {
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: #1a1a1a;
+        background-color: #ffffffe2;
+        box-shadow: 0 2px 5px #4b4b4bb3;
         top: 100%;
         left: 0;
         width: 100%;
-        padding: 1rem;
         text-align: center;
+        gap: 0;
 
         max-height: 0;
         opacity: 0;
@@ -143,15 +164,22 @@ html {
             opacity 0.3s ease,
             transform 0.3s ease,
             padding 0.3s ease;
-        padding: 0 1rem;
     }
+
+    .nav-link li {
+        padding: 1rem 0;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.362);
+      }
+      
+      .nav-link li:last-child {
+        box-shadow: none; /* 마지막 항목은 선 제거 */
+      }
 
     .nav-link.show {
         max-height: 300px;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        padding: 1rem;
     }
 
 }

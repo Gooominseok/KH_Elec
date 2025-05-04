@@ -153,7 +153,10 @@
     }
 }
 
-
+/*ask*/
+.ask-h2{
+    font-size: clamp(0.7rem, 3vw, 1.5rem);
+}
 
 
 /*text*/

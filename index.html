@@ -48,7 +48,10 @@
     <!-- main(img) -->
     <section class="page-section" id="main">
         <div class="container-main">
-            <img class="main-img" src="assets/img/banner.png" alt="#1" />
+            <picture>
+                <source media="(max-width: 1200px)" srcset="assets/img/banner-short.png">
+                <img class="main-img" src="assets/img/banner-long.png" alt="#1" />
+            </picture>
         </div>
     </section>
 

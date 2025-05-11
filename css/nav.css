@@ -15,6 +15,7 @@ html {
 }
 .nav-logo{
     -webkit-tap-highlight-color: transparent;
+    line-height: 0;
 }
 
 .nav-logo img {
@@ -35,7 +36,8 @@ html {
 .navbar.scroll .nav-link a {
     color: #2e3d86;
     transition: all 0.5s ease;
-    font-size: clamp(0.6rem,2vw,1.2rem);
+    font-size: clamp(0.7rem,2vw,1.2rem);
+    font-weight: 700;
 }
 
 .navbar.scroll .nav-link a:hover {
@@ -61,7 +63,7 @@ html {
 
 .navToggle {
     display: none;
-    font-size: clamp(1rem,4vw,1.5rem);
+    font-size: clamp(1.4rem,4vw,1.5rem);
     background: none;
     border: none;
     color: rgb(0, 0, 0);
@@ -69,6 +71,7 @@ html {
     -webkit-tap-highlight-color: transparent;
     height: 0;
     padding-top: 0;
+    padding-bottom: 0;
 }
 
 .navToggle:hover {
@@ -117,7 +120,7 @@ html {
     .navbar.scroll .nav-link a {
         color: #2e3d86;
         -webkit-tap-highlight-color: transparent;
-        font-size: clamp(0.8rem,3vw,1.2rem);
+        font-size: clamp(0.9rem,3vw,1.2rem);
     }
 
     .navbar .nav-logo img {
@@ -127,6 +130,8 @@ html {
     .nav-link a {
         color: #2e3d86;
         -webkit-tap-highlight-color: transparent;
+        font-size: clamp(0.9rem,3vw,1.2rem);
+        font-weight: 700;
     }
 
     .navToggle {

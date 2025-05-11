@@ -155,7 +155,7 @@
 
 /*ask*/
 .ask-h2{
-    font-size: clamp(0.7rem, 3vw, 1.5rem);
+    font-size: clamp(1.0rem, 3vw, 1.5rem);
 }
 
 
@@ -193,7 +193,7 @@
 
 /*text2*/
 .text2-text {
-    font-size: clamp(0.5rem, 3vw, 2rem);
+    font-size: clamp(0.9rem, 3vw, 2rem);
     white-space: nowrap;
 }
 

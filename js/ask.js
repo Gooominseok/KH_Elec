@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
             //이동할 섹션
             const targetEl = document.querySelector(targetId);
             if (targetEl) {
-                const offset = -90;
+                const offset = -70;
                 const scrollPos = targetEl.getBoundingClientRect().top + window.pageYOffset + offset;
 
                 window.scrollTo({

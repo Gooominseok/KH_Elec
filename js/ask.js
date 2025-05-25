@@ -201,4 +201,38 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    document.querySelectorAll('.service-item').forEach(link => {
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+
+            const targetId = this.dataset.target;
+            const selectedOption = this.dataset.option;
+
+            //이동할 섹션
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                const offset = -90;
+                const scrollPos = targetEl.getBoundingClientRect().top + window.pageYOffset + offset;
+
+                window.scrollTo({
+                    top: scrollPos,
+                    behavior: 'smooth'
+                });
+            }
+
+            //체크박스 초기화
+            document.querySelectorAll('input[name="options[]"]').forEach(cb => {
+                cb.checked = false;
+            });
+
+            //해당 항목 체크
+            const targetCheckbox = Array.from(document.querySelectorAll('input[name="options[]"]'))
+                .find(cb => cb.value === selectedOption);
+            if(targetCheckbox) {
+                targetCheckbox.checked = true;
+            }
+        });
+    });
+
 });

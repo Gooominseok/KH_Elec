@@ -56,8 +56,7 @@
 
     <!-- describe -->
     <section class="page-section" id="describe">
-        <div class="container">
-            <div class="wrapper">
+        <div class="wrapper">
                 <!-- <div class="describe-title">
                     <strong class="describe-text">서울 경기 어디든!<br><span style="color:rgb(246, 43, 43)">긴급출동</span>
                         전기전문업체</strong>
@@ -66,7 +65,7 @@
                     <h2 class="text-muted describe-h2 italic">주거부터 상업까지</h2>
                     <h3 class="describe-h3">조명/누전/닥트/전기공사 올인원 긴급 출동 서비스</h3>
                 </div> -->
-                <img class="describe-img"src="assets/img/describe.jpg" alt="describe_img">            </div>
+            <img class="describe-img"src="assets/img/describe.jpg" alt="describe_img">
         </div>
     </section>
 
@@ -83,54 +82,37 @@
                 </div>
                 <div class="services-button">
                     <!--버튼-->
-                    <div class="service-item">
-                        <a href="#main" id="electric">
+                        <a class="service-item" data-target="#ask" id="electric" data-option="전기 공사">
                             <img src="assets/icon/electric.png" alt="electric">
                         </a>
-                    </div>
 
-                    <div class="service-item">
-                        <a href="#main" id="light">
+                        <a class="service-item" data-target="#ask" id="light" data-option="조명">
                             <img src="assets/icon/light.png" alt="light">
                         </a>
-                    </div>
 
-                    <div class="service-item">
-                        <a href="#main" id="interiorLight">
+                        <a class="service-item" data-target="#ask" id="interiorLight" data-option="인테리어 조명">
                             <img src="assets/icon/interior-light.png" alt="interior-light">
                         </a>
-                    </div>
 
-                    <div class="service-item">
-                        <a href="#main" id="shortCircuit">
+                        <a class="service-item" data-target="#ask" id="shortCircuit" data-option="누전">
                             <img src="assets/icon/short-circuit.png" alt="short-circuit">
                         </a>
-                    </div>
 
-                    <div class="service-item">
-                        <a href="#main" id="extend">
+                        <a class="service-item" data-target="#ask" id="extend" data-option="증설 공사">
                             <img src="assets/icon/extend.png" alt="extend">
                         </a>
-                    </div>
 
-                    <div class="service-item">
-                        <a href="#main" id="doct">
+                        <a class="service-item" data-target="#ask" id="doct" data-option="닥트">
                             <img src="assets/icon/doct.png" alt="doct">
                         </a>
-                    </div>
 
-
-                    <div class="service-item">
-                        <a href="#main" id="motor">
+                        <a class="service-item" data-target="#ask" id="motor" data-option="모터 교체">
                             <img src="assets/icon/motor.png" alt="motor">
                         </a>
-                    </div>
 
-                    <div class="service-item">
-                        <a href="#main" id="etc">
+                        <a class="service-item" data-target="#ask" id="etc" data-option="기타">
                             <img src="assets/icon/etc.png" alt="etc">
                         </a>
-                    </div>
 
                 </div>
             </div>
@@ -226,42 +208,42 @@
                             </div>
 
                             <div class="form-group" id="optionsField">
-                                <label id="optionsLabel">어떤 서비스가 필요하세요?</label>
+                                <label id="optionsLabel">어떤 서비스가 필요하세요?(중복 가능)</label>
                                 <div class="options-container">
                                     <div class="option-item">
-                                        <input type="checkbox" id="option1" name="options[]" value="닥트"
+                                        <input type="checkbox" id="option1" name="options[]" value="전기 공사"
                                             autocomplete="off">
-                                        <label for="option1">닥트</label>
+                                        <label for="option1">전기 공사</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option2" name="options[]" value="누전"
+                                        <input type="checkbox" id="option2" name="options[]" value="조명"
                                             autocomplete="off">
-                                        <label for="option2">누전</label>
+                                        <label for="option2">조명</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option3" name="options[]" value="전등/조명"
+                                        <input type="checkbox" id="option3" name="options[]" value="인테리어 조명"
                                             autocomplete="off">
-                                        <label for="option3">전등/조명</label>
+                                        <label for="option3">인테리어 조명</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option4" name="options[]" value="인테리어 전기"
+                                        <input type="checkbox" id="option4" name="options[]" value="누전"
                                             autocomplete="off">
-                                        <label for="option4">인테리어 전기</label>
+                                        <label for="option4">누전</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option5" name="options[]" value="전기 공사"
+                                        <input type="checkbox" id="option5" name="options[]" value="증설 공사"
                                             autocomplete="off">
-                                        <label for="option5">전기 공사</label>
+                                        <label for="option5">증설 공사</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option6" name="options[]" value="모터 교체"
+                                        <input type="checkbox" id="option6" name="options[]" value="닥트"
                                             autocomplete="off">
-                                        <label for="option6">모터 교체</label>
+                                        <label for="option6">닥트</label>
                                     </div>
                                     <div class="option-item">
-                                        <input type="checkbox" id="option7" name="options[]" value="증설 공사"
+                                        <input type="checkbox" id="option7" name="options[]" value="모터 교체"
                                             autocomplete="off">
-                                        <label for="option7">증설 공사</label>
+                                        <label for="option7">모터 교체</label>
                                     </div>
                                     <div class="option-item">
                                         <input type="checkbox" id="optionEtc" name="options[]" value="기타"
@@ -383,7 +365,11 @@
     <section class="page-section" id="example">
         <div class="wrapper">
             <h2 class="example-h2 italic">경희 전기의 시공사례</h2>
-            <button type="button" class="btn btn-success">시공사례 보러가기</button>
+            <a  class="btn"
+                href="https://blog.naver.com/PostList.naver?blogId=kyeonghee_electronic&from=postList&categoryNo=14"
+                target="_blank" rel="noopener noreferrer">
+                시공사례 보러가기
+            </a>
             <img class="img-fluid example-img" style="width: 95vw;" src="assets/img/sample_example.png" alt="시공사례">
         </div>
     </section>

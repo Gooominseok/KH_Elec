@@ -39,7 +39,8 @@
 
 /*describe*/
 .describe-img {
-    width: 100vw;
+    width: 100%;
+    height: auto;
 }
 /* .describe-title {
     background-color: #2e3d86;
@@ -191,6 +192,20 @@
     font-size: clamp(0.9rem, 5vw, 1.8rem);
     font-weight: 500;
 }
+
+a.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #2e3d86; /* Bootstrap success 색 */
+    color: white;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  a.btn:hover {
+    background-color: #212c61; /* 약간 더 어두운 초록색 */
+  }
 
 /*text2*/
 .text2-img {

@@ -3,7 +3,7 @@ html {
 }
 
 .navbar {
-    position: fixed;
+    position: relative;
     right: 0;
     left: 0;
     padding: 1.2rem 2rem 1.2rem 1.2rem;
@@ -24,6 +24,7 @@ html {
 }
 
 .navbar.scroll {
+    position: fixed;
     padding: 1rem;
     background-color: #ffffffe2;
     box-shadow: 0 2px 5px #4b4b4bb3;
@@ -101,7 +102,7 @@ html {
 
 @media (max-width: 900px) {
     .navbar {
-        position: fixed;
+        position: relative;
         padding: 0.7rem;
         background-color: transparent;
     }

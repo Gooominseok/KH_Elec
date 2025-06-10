@@ -186,8 +186,32 @@
 
 /*example*/
 .example-img {
-    margin-top: 0.4rem;
+    width: 90%;
+    display: grid;
+    gap: clamp(0.3rem, 2vw, 6rem);
+    justify-content: center;
+    padding-top: 2rem;
+    -webkit-tap-highlight-color: transparent;
+    grid-template-columns: repeat(4, 1fr);
 }
+
+.example-item img {
+    width: 22vw;
+    max-width: 400px;
+    height: auto;     
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 1281px) {
+    .example-img{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .example-item img {
+        width: 45vw;
+    }
+}
+
 .example-h2 {
     font-size: clamp(0.9rem, 5vw, 1.8rem);
     font-weight: 500;

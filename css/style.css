@@ -92,18 +92,17 @@
 
 .phone-btn {
     display: inline-block;
-    background-color: #4a9bd6;        /* 파란색 */
-    color: white;                     /* 흰색 글자 */
-    font-weight: bold;               /* 굵은 글씨 */
-    font-size: clamp(1.0rem, 4.5vw, 5rem);               /* 글자 크기 */
-    padding: 0.8rem 2.5rem 0.6rem 2.5rem;          /* 위아래, 좌우 여백 */
-    border: none;
-    border-radius: 999px;            /* pill 모양 (양 끝 둥글게) */
-    text-align: center;
-    text-decoration: none;           /* 밑줄 제거 */
-    white-space: nowrap;            /* 한 줄 유지 */
-    transition: background-color 0.3s ease;
-    box-shadow: 0 6px 12px #4b4b4bb3;
+    background-color: #4a9bd6;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(1.0rem, 4.5vw, 5rem);
+    padding: 0.8rem 2.5rem;
+    border: 2px solid white;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px #206c9e;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: clamp(1.0rem, 4.5vw, 5rem);
   }
 
 /*services*/
@@ -215,19 +214,19 @@
 
 /*example*/
 .blog-button {
+
     display: inline-block;
-    background-color: #4a9bd6;        /* 파란색 */
-    color: white;                     /* 흰색 글자 */
-    font-weight: bold;               /* 굵은 글씨 */
+    background-color: #4a9bd6;
+    color: white;
+    font-weight: bold;
     font-size: clamp(1.0rem, 2.6vw, 2rem);               /* 글자 크기 */
     padding: 0.8rem 2.5rem 0.6rem 2.5rem;          /* 위아래, 좌우 여백 */
-    border: none;
-    border-radius: 999px;            /* pill 모양 (양 끝 둥글게) */
-    text-align: center;
-    text-decoration: none;           /* 밑줄 제거 */
-    white-space: nowrap;            /* 한 줄 유지 */
-    transition: background-color 0.3s ease;
-    box-shadow: 0 6px 12px #4b4b4bb3;
+    border: 2px solid white;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px #206c9e;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
   }
 
 .example-img {

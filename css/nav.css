@@ -12,6 +12,7 @@ html {
     background-color: transparent;
     box-sizing: border-box;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 5px #4b4b4bb3;
 }
 .nav-logo{
     -webkit-tap-highlight-color: transparent;

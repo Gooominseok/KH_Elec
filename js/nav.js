@@ -49,7 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //전화 연결
-    document.getElementById('phoneBtn').addEventListener('click', function () {
-        window.location.href = 'tel:01037073277';
-    });
+    document.querySelectorAll('.call-link').forEach(el => {
+        el.addEventListener('click', function () {
+          window.location.href = 'tel:01037073277';
+        });
+      });
 });

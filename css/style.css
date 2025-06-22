@@ -78,17 +78,16 @@
 } */
 /*text*/
 .text {
-    /*
     width: 30vw;
     max-width: 500px;
     min-width: 100px;
     height: auto;
-    */
-    font-weight: bold;
+
+    /*font-weight: bold;
     color: #2e3d86;
     font-size: clamp(1.0rem, 4.5vw, 5rem);
-    text-align: center;
-    margin-bottom: 2vw;
+    text-align: center;*/
+    margin-bottom: 3vw;
 }
 
 .phone-btn {

@@ -42,51 +42,13 @@
     width: 100%;
     height: auto;
 }
-/* .describe-title {
-    background-color: #2e3d86;
-    color: #ffffee;
-    width: 100%;
-    padding: 1em 0em;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 
-    font-size: clamp(0.8rem, 5vw, 2rem);
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.describe-text {
-    text-align: center;
-} */
-
-.describe-block {
-    margin-top: clamp(1.3rem, 3vw, 2.8rem);
-    align-items: center;
-    white-space: nowrap;
-    max-width: 95%;
-}
-
-/* .describe-h2 {
-    font-size: clamp(0.9rem, 4vw, 1.8rem);
-    font-weight: 500;
-}
-
-.describe-h3 {
-    font-size: clamp(0.5rem, 4.5vw, 2rem);
-    font-weight: 600;
-} */
 /*text*/
 .text {
     width: 30vw;
     max-width: 500px;
     min-width: 100px;
     height: auto;
-
-    /*font-weight: bold;
-    color: #2e3d86;
-    font-size: clamp(1.0rem, 4.5vw, 5rem);
-    text-align: center;*/
     margin-bottom: 3vw;
 }
 
@@ -100,7 +62,7 @@
     border: 2px solid white;
     border-radius: 999px;
     text-decoration: none;
-    box-shadow: 0 4px 10px #206c9e;
+    box-shadow: 0 4px 6px #206c9e;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     font-size: clamp(1.0rem, 4.5vw, 5rem);
   }
@@ -129,7 +91,7 @@
     display: grid;
     gap: clamp(0.8rem, 3vw, 6rem);
     justify-content: center;
-    padding-top: 3rem;
+    padding-top: clamp(2.5rem, 6vw, 6rem);
     -webkit-tap-highlight-color: transparent;
     grid-template-columns: repeat(8, 1fr);
 }
@@ -224,7 +186,7 @@
     border: 2px solid white;
     border-radius: 999px;
     text-decoration: none;
-    box-shadow: 0 4px 10px #206c9e;
+    box-shadow: 0 4px 6px #206c9e;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     white-space: nowrap;
   }
@@ -234,7 +196,7 @@
     display: grid;
     gap: clamp(0.3rem, 2vw, 6rem);
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: clamp(2.5rem, 6vw, 6rem);
     -webkit-tap-highlight-color: transparent;
     grid-template-columns: repeat(4, 1fr);
 }

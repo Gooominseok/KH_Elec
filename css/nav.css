@@ -14,14 +14,26 @@ html {
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px #4b4b4bb3;
 }
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+
 .nav-logo{
     -webkit-tap-highlight-color: transparent;
     align-items: center;
+    display: flex;
     line-height: 1;
 }
 
 .nav-logo img {
+    height: 35px;
     max-height: 50px;
+    display: block;
+    object-fit: contain;
     transition: max-height 0.3s ease;
 }
 
@@ -33,7 +45,8 @@ html {
 }
 
 .navbar.scroll .nav-logo img {
-    max-height: 35px;
+    height: 28px;
+    max-height: none;
 }
 
 .navbar.scroll .nav-link a {

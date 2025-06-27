@@ -16,7 +16,8 @@ html {
 }
 .nav-logo{
     -webkit-tap-highlight-color: transparent;
-    line-height: 0;
+    align-items: center;
+    line-height: 1;
 }
 
 .nav-logo img {

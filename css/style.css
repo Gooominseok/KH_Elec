@@ -229,8 +229,14 @@
     height: auto;
 }
 
-/*footer*/
-.banner-foot {
+/*banner*/
+.banner {
     width: 100%;
     height: auto;
+}
+
+/*footer*/
+.footer {
+    background-color: #e6e6e6;
+    margin-top: 0;
 }
